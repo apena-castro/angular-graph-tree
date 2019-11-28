@@ -2,54 +2,49 @@
             padding: 0;
             border: 0 none;
         }
+
+        .node-element {
+            border: 1px solid #9b9c9c;  
+            border-radius: 5px;     
+            width: 100px; 
+            height: 100px;
+             text-align: center;
+            
+        }
         
         .node-header,.node-content {
             padding: .5em .7em;
         }
         
-        .node-header-general-data {
-            background-color: green;
+        .node-header {
             color: #ffffff;
+            border-radius: 100%;
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            margin-top: 5px;
         }
 
-        .node-header-rate {
-            background-color: #7c207cfd;
-            color: #ffffff;
+        .node-header.general-info-node {
+           border: 1px solid #8bc3c5fd;
+           background-color: #8bc3c5fd;
         }
 
-          .node-header-fund {
-            background-color: #3727c0fd;
-            color: #ffffff;
+        .node-header.rate-node {
+            border: 1px solid #b17cb1fd;  
+            background-color: #b17cb1fd;
+          
+        }
+
+          .node-header.fund-node {
+            background-color: #5f71a1fd;
+            border: 1px solid #5f71a1fd;  
         }
         
         .node-content {
             text-align: center;
-            border: 1px solid #495ebb;
         }
         
-        .node-content img {
-            border-radius: 50%;
-        }
+
         
-        .ui-organizationchart-node-content.department-cfo {
-            background-color: #7247bc;
-            color: #ffffff;
-        }
         
-        .ui-organizationchart-node-content.department-coo {
-            background-color: #a534b6;
-            color: #ffffff;
-        }
-        
-        .ui-organizationchart-node-content.department-cto {
-            background-color: #e9286f;
-            color: #ffffff;
-        }
-        
-        .ui-person .ui-node-toggler {
-            color: #495ebb !important;
-        }
-        
-        .department-cto .ui-node-toggler {
-            color: #8a0a39 !important;
-        }

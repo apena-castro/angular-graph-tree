@@ -8,6 +8,7 @@ import {PanelModule} from 'primeng/panel';
 import {TabViewModule} from 'primeng/tabview';
 import {CodeHighlighterModule} from 'primeng/codehighlighter';
 import { AppComponent } from './app.component';
+import { TreeNodeComponent } from './tree-node.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
@@ -22,7 +23,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
         PanelModule,
         TabViewModule,
         CodeHighlighterModule ],
-  declarations: [ AppComponent ],
-  bootstrap:    [ AppComponent ]
+  declarations: [ AppComponent, TreeNodeComponent ],
+  bootstrap:    [ AppComponent]
 })
 export class AppModule { }

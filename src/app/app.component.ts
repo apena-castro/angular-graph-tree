@@ -1,6 +1,7 @@
 import {Component,OnInit,ViewEncapsulation} from '@angular/core';
 import {TreeNode} from 'primeng/api';
 import {MessageService} from 'primeng/api';
+
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
@@ -23,33 +24,54 @@ data1: TreeNode[];
             type: 'general-info',
             styleClass: 'general-info-node',
             expanded: true,
-            data: {name:'Información General', 'avatar': 'walter.jpg'},
+            data: {name:'Información General'},
             children: [
                 {
                     label: 'T',
                     type: 'rate',
                     styleClass: 'rate-node',
                     expanded: true,
-                    data: {name:'Tarifa', code: '10110', 'avatar': 'saul.jpg'},
+                    data: {name:'Tarifa', code: '10110'},
                     children:[{
                         label: 'N',
                         type: 'fund',
-                        data: {name:'Fondo', code: 'AA1', 'avatar': 'saul.jpg'},
-                        styleClass: 'fund-node'
+                        data: {name:'Fondo', code: 'AA1'},
+                        styleClass: 'fund-node',
+                        
                     },
                     {
                          label: 'N',
                         type: 'fund',
-                        data: {name:'Fondo', code: 'A1','avatar': 'saul.jpg'},
+                        data: {name:'Fondo', code: 'A1'},
                         styleClass: 'fund-node'
                     }],
-                }               
+                },
+                 {
+                    label: 'T',
+                    type: 'rate',
+                    styleClass: 'rate-node',
+                    expanded: true,
+                    data: {name:'Tarifa', code: '10111'},
+                    children:[{
+                        label: 'N',
+                        type: 'fund',
+                        data: {name:'Fondo', code: 'AA10'},
+                        styleClass: 'fund-node',
+                        
+                    },
+                    {
+                         label: 'N',
+                        type: 'fund',
+                        data: {name:'Fondo', code: 'A10'},
+                        styleClass: 'fund-node'
+                    }],
+                }             
             ]
         }];
 
     }
 
     onNodeSelect(event) {
-        this.messageService.add({severity: 'success', summary: 'Node Selected', detail: event.node.label});
+      /*  this.messageService.add({severity: 'success', summary: 'Node Selected', detail: event.node.label});*/
     }
 }

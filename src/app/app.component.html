@@ -4,26 +4,26 @@
 
 <h3 class="first">Advanced</h3>
 <p>Organization with advanced customization.</p>
-<p-organizationChart [value]="data1" selectionMode="single" [(selection)]="selectedNode" (onNodeSelect)="onNodeSelect($event)"
+<p-organizationChart [value]="data1" style="" selectionMode="single" [(selection)]="selectedNode" (onNodeSelect)="onNodeSelect($event)"
     styleClass="company">
     <ng-template let-node pTemplate="general-info">
-        <div class="node-header-general-data ui-corner-top">{{node.label}}</div>
-        <div class="node-content">     
-            <div>{{node.data.name}}</div>
-        </div>
+        <app-productStructureNode
+        [node]="node">
+        </app-productStructureNode>
     </ng-template>
     <ng-template let-node pTemplate="rate">
-        <div class="node-header-rate ui-corner-top">{{node.label}}</div>
-        <div class="node-content">     
-            <div><b>{{node.data.name}}</b></div>
-             <div>{{node.data.code}}</div>
-        </div>
+         <app-productStructureNode
+        [node]="node">
+        </app-productStructureNode>
     </ng-template>
     <ng-template let-node pTemplate="fund">
-        <div class="node-header-fund ui-corner-top">{{node.label}}</div>
-        <div class="node-content">     
-            <div><b>{{node.data.name}}</b></div>
-             <div>{{node.data.code}}</div>
-        </div>
+         <app-productStructureNode
+        [node]="node">
+        </app-productStructureNode>
+    </ng-template>
+     <ng-template let-node pTemplate="otro">
+         <app-productStructureNode
+        [node]="node">
+        </app-productStructureNode>
     </ng-template>
 </p-organizationChart>
